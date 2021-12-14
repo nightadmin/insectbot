@@ -5,7 +5,15 @@
 cd ~
 mkdir INSECTBOT && cd INSECTBOT
 git clone https://github.com/nightadmin/insectbot
+cd insectbot
 ```
 Подготовим бота к развертыванию.
 ## Подготовка к запуску
-Проверьте, что установлены все [необходимые компоненты](requirments.md)
+Проверьте, что установлены все [необходимые компоненты](requirements.md).
+### Настройка конфига
+Необходимо настроить бота "под себя". Для этого в каталоге config нужно вручную заполнить config.json или выполнить автонастройку с помощью config.py.
+### Развертывание БД
+Неоьходимо запустить daemon mongodb. Для этого пишем:
+```bash
+mongod --port 3000 --dbpath database
+```
